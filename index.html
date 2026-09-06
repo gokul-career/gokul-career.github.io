@@ -929,7 +929,17 @@ footer{
   .nav-links {
     display: none;
   }
-}    
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}  
 </style>
 </head>
 
@@ -1371,6 +1381,26 @@ footer{
         <p>© 2026 Gokul S. All Rights Reserved.</p>
     </div>
 </footer>
+<script>
+  const revealElements = document.querySelectorAll(
+    ".section-title, .highlight-card, .skill-card, .experience-card, .education-card, .project-card, .certification-card, .contact-card"
+  );
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal", "show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  revealElements.forEach((element) => {
+    element.classList.add("reveal");
+    observer.observe(element);
+  });
+</script>
 </body>
 </html>
