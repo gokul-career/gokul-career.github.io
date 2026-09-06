@@ -1,831 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Gokul S | SPOC & Customer Support Professional</title>
-
-    <meta name="description"
-        content="Portfolio of Gokul S - SPOC and Customer Support Professional with 2+ years of experience in customer service, team coordination and operations.">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #080b12;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        /* NAVBAR */
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(8, 11, 18, 0.92);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #1d2433;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            width: 90%;
-            margin: auto;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 23px;
-            font-weight: bold;
-            color: #4f8cff;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #c7ccd8;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #4f8cff;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 70px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: #245cff;
-            filter: blur(180px);
-            opacity: 0.12;
-            top: 10%;
-            left: 35%;
-        }
-
-        .hero-content {
-            position: relative;
-            max-width: 800px;
-        }
-
-        .hello {
-            color: #4f8cff;
-            font-size: 17px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 {
-            font-size: clamp(45px, 8vw, 78px);
-            line-height: 1.05;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #4f8cff;
-        }
-
-        .hero h2 {
-            font-size: clamp(22px, 4vw, 34px);
-            color: #d5d9e2;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            color: #9da5b5;
-            max-width: 700px;
-            font-size: 17px;
-            margin-bottom: 32px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 13px 24px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-            display: inline-block;
-        }
-
-        .primary {
-            background: #4f8cff;
-            color: white;
-        }
-
-        .primary:hover {
-            transform: translateY(-3px);
-            background: #3679f5;
-        }
-
-        .secondary {
-            border: 1px solid #354052;
-            color: #dce1eb;
-        }
-
-        .secondary:hover {
-            border-color: #4f8cff;
-            color: #4f8cff;
-        }
-
-        /* SECTIONS */
-
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 55px;
-        }
-
-        .section-title h2 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #8f98a9;
-        }
-
-        /* ABOUT */
-
-        .about-box {
-            background: #101520;
-            border: 1px solid #1e2737;
-            border-radius: 15px;
-            padding: 35px;
-        }
-
-        .about-box p {
-            color: #aeb6c5;
-            margin-bottom: 18px;
-            font-size: 16px;
-        }
-
-        .highlight {
-            color: #4f8cff;
-            font-weight: bold;
-        }
-
-        /* EXPERIENCE */
-
-        .experience-card {
-            background: #101520;
-            border: 1px solid #1e2737;
-            border-radius: 15px;
-            padding: 35px;
-            margin-bottom: 25px;
-            transition: 0.3s;
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-            border-color: #4f8cff;
-        }
-
-        .experience-top {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-
-        .experience-card h3 {
-            font-size: 24px;
-        }
-
-        .company {
-            color: #4f8cff;
-            margin-top: 5px;
-        }
-
-        .date {
-            color: #858e9f;
-        }
-
-        .experience-card ul {
-            padding-left: 20px;
-            color: #aeb6c5;
-        }
-
-        .experience-card li {
-            margin-bottom: 9px;
-        }
-
-        .award {
-            margin-top: 25px;
-            padding: 15px;
-            border-left: 3px solid #4f8cff;
-            background: #0c111b;
-            color: #cbd2df;
-        }
-
-        /* SKILLS */
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-        }
-
-        .skill {
-            padding: 18px;
-            text-align: center;
-            background: #101520;
-            border: 1px solid #1e2737;
-            border-radius: 10px;
-            color: #d7dce6;
-            transition: 0.3s;
-        }
-
-        .skill:hover {
-            transform: translateY(-4px);
-            border-color: #4f8cff;
-            color: #4f8cff;
-        }
-
-        /* EDUCATION */
-
-        .education-card {
-            background: #101520;
-            border: 1px solid #1e2737;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 20px;
-        }
-
-        .education-card h3 {
-            margin-bottom: 8px;
-        }
-
-        .education-card .degree {
-            color: #4f8cff;
-            margin-bottom: 7px;
-        }
-
-        .education-card p {
-            color: #929bab;
-        }
-
-        /* PROJECTS */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 22px;
-        }
-
-        .project-card {
-            background: #101520;
-            border: 1px solid #1e2737;
-            border-radius: 15px;
-            padding: 30px;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #4f8cff;
-        }
-
-        .project-number {
-            color: #4f8cff;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .project-card h3 {
-            margin-bottom: 12px;
-        }
-
-        .project-card p {
-            color: #9ea7b7;
-        }
-
-        /* CERTIFICATIONS */
-
-        .cert-list {
-            display: grid;
-            gap: 15px;
-        }
-
-        .cert {
-            background: #101520;
-            border: 1px solid #1e2737;
-            padding: 20px 25px;
-            border-radius: 10px;
-            color: #cbd2df;
-        }
-
-        .cert span {
-            color: #4f8cff;
-            font-weight: bold;
-        }
-
-        /* CONTACT */
-
-        .contact-box {
-            text-align: center;
-            background: #101520;
-            border: 1px solid #1e2737;
-            border-radius: 15px;
-            padding: 50px 30px;
-        }
-
-        .contact-box h2 {
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .contact-box p {
-            color: #9ca5b5;
-            margin-bottom: 25px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-            color: #cbd2df;
-        }
-
-        .contact-info a:hover {
-            color: #4f8cff;
-        }
-
-        /* FOOTER */
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid #1d2433;
-            color: #70798a;
-            font-size: 14px;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 700px) {
-
-            .nav-container {
-                height: auto;
-                padding: 18px 0;
-                align-items: flex-start;
-            }
-
-            .nav-links {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: flex-end;
-            }
-
-            .nav-links a {
-                font-size: 12px;
-            }
-
-            .hero {
-                min-height: 90vh;
-            }
-
-            section {
-                padding: 75px 0;
-            }
-
-            .about-box,
-            .experience-card,
-            .education-card,
-            .project-card {
-                padding: 24px;
-            }
-
-            .section-title h2 {
-                font-size: 30px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gokul S | SPOC & Customer Support Professional</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0b1120;
+    color:#e5e7eb;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(11,17,32,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #1e293b;
+}
+
+.nav-inner{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#60a5fa;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#60a5fa;
+}
+
+section{
+    padding:90px 0;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:100px;
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 14px;
+    border:1px solid #334155;
+    border-radius:30px;
+    color:#93c5fd;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,72px);
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#60a5fa;
+}
+
+.hero h2{
+    font-size:25px;
+    color:#cbd5e1;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#94a3b8;
+    max-width:650px;
+    font-size:17px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:12px 22px;
+    border-radius:8px;
+    font-weight:bold;
+    display:inline-block;
+    transition:.3s;
+}
+
+.primary{
+    background:#2563eb;
+    color:white;
+}
+
+.primary:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.secondary{
+    border:1px solid #475569;
+    color:#e2e8f0;
+}
+
+.secondary:hover{
+    border-color:#60a5fa;
+    color:#60a5fa;
+}
+
+.section-title{
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#64748b;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.card{
+    background:#111827;
+    border:1px solid #1e293b;
+    border-radius:14px;
+    padding:28px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#334155;
+}
+
+.card h3{
+    margin-bottom:12px;
+    color:#f8fafc;
+}
+
+.card p{
+    color:#94a3b8;
+}
+
+.info-list{
+    list-style:none;
+}
+
+.info-list li{
+    padding:8px 0;
+    color:#94a3b8;
+}
+
+.info-list strong{
+    color:#e2e8f0;
+}
+
+.experience{
+    border-left:3px solid #2563eb;
+    padding-left:25px;
+}
+
+.experience h3{
+    font-size:24px;
+}
+
+.company{
+    color:#60a5fa;
+    font-weight:bold;
+}
+
+.date{
+    color:#64748b;
+    font-size:14px;
+    margin:5px 0 15px;
+}
+
+.experience ul{
+    padding-left:20px;
+    color:#94a3b8;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    background:#111827;
+    border:1px solid #334155;
+    padding:10px 16px;
+    border-radius:8px;
+    color:#cbd5e1;
+}
+
+.education-grid,
+.project-grid,
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.project-card{
+    background:#111827;
+    border:1px solid #1e293b;
+    border-radius:14px;
+    padding:25px;
+}
+
+.project-card h3{
+    color:#f8fafc;
+    margin-bottom:8px;
+}
+
+.project-card .tech{
+    color:#60a5fa;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.project-card p{
+    color:#94a3b8;
+}
+
+.contact-box{
+    text-align:center;
+    background:#111827;
+    border:1px solid #1e293b;
+    border-radius:16px;
+    padding:45px 25px;
+}
+
+.contact-box h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.contact-box p{
+    color:#94a3b8;
+    margin-bottom:25px;
+}
+
+.contact-links{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+footer{
+    border-top:1px solid #1e293b;
+    padding:25px 0;
+    text-align:center;
+    color:#64748b;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .about-grid,
+    .education-grid,
+    .project-grid,
+    .cert-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:70px 0;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+<nav>
+    <div class="container nav-inner">
+        <div class="logo">Gokul S</div>
 
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Gokul S</div>
-
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
+<!-- HERO -->
 
-    <!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
 
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
+            <div class="badge">SPOC • Customer Support • Team Coordination</div>
 
-                <div class="hello">HELLO, I'M</div>
+            <h1>
+                Hi, I'm <span>Gokul S</span>
+            </h1>
 
-                <h1>
-                    Gokul <span>S.</span>
-                </h1>
+            <h2>
+                SPOC & Customer Support Professional
+            </h2>
 
-                <h2>
-                    SPOC & Customer Support Professional
-                </h2>
+            <p>
+                Customer Support professional with 2+ years of experience
+                in customer service, agent support, call handling,
+                escalation management, CRM/Dialer operations and team coordination.
+            </p>
 
-                <p>
-                    Customer Support professional with 2+ years of experience
-                    in customer service, agent support, team coordination,
-                    call handling and operational reporting.
-                </p>
+            <div class="buttons">
 
-                <div class="buttons">
-                    <a href="#contact" class="btn primary">
-                        Get In Touch
-                    </a>
+                <a href="#experience" class="btn primary">
+                    View Experience
+                </a>
 
-                    <a href="#experience" class="btn secondary">
-                        View Experience
-                        <a href="RESUME%20(2).pdf" class="btn secondary" download>Download Resume</a>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>About Me</h2>
-                <p>A little about my professional journey</p>
-            </div>
-
-            <div class="about-box">
-
-                <p>
-                    I am a <span class="highlight">SPOC and Customer Support Professional</span>
-                    with over 2 years of experience in customer service,
-                    communication and operational coordination.
-                </p>
-
-                <p>
-                    My experience includes supporting agents, handling client
-                    calls, coordinating customer and manager conference calls,
-                    managing callbacks, PFA follow-ups and preparing daily
-                    productivity reports.
-                </p>
-
-                <p>
-                    I enjoy solving customer and operational issues,
-                    coordinating with teams and maintaining smooth day-to-day
-                    operations while delivering a positive customer experience.
-                </p>
+                <a href="RESUME%20(2).pdf" class="btn secondary" download>
+                    Download Resume
+                </a>
 
             </div>
 
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- EXPERIENCE -->
+<!-- ABOUT -->
 
-    <section id="experience">
-        <div class="container">
+<section id="about">
+    <div class="container">
 
-            <div class="section-title">
-                <h2>Experience</h2>
-                <p>My professional experience</p>
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Professional background & profile</p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="card">
+                <h3>Professional Summary</h3>
+
+                <p>
+                    Customer Support Executive with experience in customer
+                    service, issue resolution, CRM operations and maintaining
+                    positive customer experiences. Currently working as a
+                    SPOC, supporting agents and coordinating with clients
+                    and internal teams.
+                </p>
             </div>
 
-            <div class="experience-card">
+            <div class="card">
 
-                <div class="experience-top">
+                <h3>Quick Information</h3>
 
-                    <div>
-                        <h3>SPOC / Customer Support Executive</h3>
-                        <div class="company">
-                            Thinksynq Solutions
-                        </div>
-                    </div>
+                <ul class="info-list">
 
-                    <div class="date">
-                        June 2024 – Present
-                    </div>
+                    <li>
+                        <strong>Current Role:</strong> SPOC
+                    </li>
 
-                </div>
+                    <li>
+                        <strong>Company:</strong> Thinksynq Solutions
+                    </li>
 
-                <ul>
-                    <li>Supporting agents with day-to-day operational requirements.</li>
+                    <li>
+                        <strong>Experience:</strong> 2 Years 3 Months
+                    </li>
 
-                    <li>Handling client calls and coordinating communication between teams.</li>
+                    <li>
+                        <strong>Education:</strong> B.Tech Information Technology
+                    </li>
 
-                    <li>Connecting customers and managers through conference calls.</li>
+                    <li>
+                        <strong>Location:</strong> Chennai, Tamil Nadu
+                    </li>
 
-                    <li>Preparing and maintaining daily productivity reports.</li>
-
-                    <li>Managing callbacks and follow-up activities.</li>
-
-                    <li>Handling PFA follow-ups and coordinating with team members.</li>
-
-                    <li>Listening to and monitoring escalation calls for quality and resolution.</li>
-
-                    <li>Supporting smooth team coordination and operational workflow.</li>
                 </ul>
 
-                <div class="award">
-                    ⭐ <strong>Guiding Star Award</strong> — Recognized for exceptional
-                    performance and commitment to customer satisfaction.
-                </div>
-
             </div>
 
         </div>
-    </section>
+
+    </div>
+</section>
 
 
-    <!-- SKILLS -->
+<!-- EXPERIENCE -->
 
-    <section id="skills">
-        <div class="container">
+<section id="experience">
+    <div class="container">
 
-            <div class="section-title">
-                <h2>Skills</h2>
-                <p>Professional & technical skills</p>
+        <div class="section-title">
+            <h2>Experience</h2>
+            <p>My professional journey</p>
+        </div>
+
+        <div class="card experience">
+
+            <h3>Customer Support Executive / SPOC</h3>
+
+            <div class="company">
+                Thinksynq Solutions
             </div>
 
-            <div class="skills-grid">
-
-                <div class="skill">Customer Service</div>
-                <div class="skill">Team Coordination</div>
-                <div class="skill">Call Handling</div>
-                <div class="skill">Escalation Handling</div>
-                <div class="skill">CRM / Dialer</div>
-                <div class="skill">Operational Reporting</div>
-                <div class="skill">Callback Management</div>
-                <div class="skill">PFA Follow-ups</div>
-                <div class="skill">Problem Solving</div>
-                <div class="skill">Excel</div>
-                <div class="skill">LibreOffice</div>
-                <div class="skill">HTML / CSS / JS</div>
-                <div class="skill">Python</div>
-                <div class="skill">Java</div>
-
+            <div class="date">
+                June 2024 – Present
             </div>
+
+            <ul>
+
+                <li>Providing agent support and resolving operational queries.</li>
+
+                <li>Handling client calls and coordinating with internal teams.</li>
+
+                <li>Connecting customers and managers through conference calls.</li>
+
+                <li>Preparing and maintaining daily productivity reports.</li>
+
+                <li>Managing callbacks and PFA follow-ups.</li>
+
+                <li>Coordinating with team members to ensure smooth operations.</li>
+
+                <li>Reviewing escalation calls and supporting issue resolution.</li>
+
+            </ul>
+
+            <br>
+
+            <p>
+                <strong>Achievement:</strong>
+                Guiding Star Award for exceptional performance and customer satisfaction.
+            </p>
 
         </div>
-    </section>
+
+    </div>
+</section>
 
 
-    <!-- EDUCATION -->
+<!-- SKILLS -->
 
-    <section id="education">
-        <div class="container">
+<section id="skills">
+    <div class="container">
 
-            <div class="section-title">
-                <h2>Education</h2>
-                <p>Academic background</p>
-            </div>
+        <div class="section-title">
+            <h2>Skills</h2>
+            <p>Professional & technical skills</p>
+        </div>
 
-            <div class="education-card">
+        <div class="skills">
+
+            <div class="skill">Customer Service</div>
+            <div class="skill">Team Coordination</div>
+            <div class="skill">Call Handling</div>
+            <div class="skill">Escalation Management</div>
+            <div class="skill">CRM</div>
+            <div class="skill">Dialer Operations</div>
+            <div class="skill">Conference Calls</div>
+            <div class="skill">Reporting</div>
+            <div class="skill">Callback Management</div>
+            <div class="skill">PFA Follow-ups</div>
+            <div class="skill">LibreOffice</div>
+            <div class="skill">Microsoft Excel</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Education</h2>
+            <p>Academic background</p>
+        </div>
+
+        <div class="education-grid">
+
+            <div class="card">
 
                 <h3>B.Tech – Information Technology</h3>
 
-                <div class="degree">
+                <p>
                     Anand Institute of Higher Technology, Chennai
-                </div>
+                </p>
 
                 <p>
-                    2020 – 2024 &nbsp; | &nbsp; <strong>82%</strong>
+                    <strong>2020 – 2024</strong>
+                </p>
+
+                <p>
+                    Percentage: <strong>82%</strong>
                 </p>
 
             </div>
 
-            <div class="education-card">
+            <div class="card">
 
-                <h3>Higher Secondary Certificate (HSC)</h3>
+                <h3>Higher Secondary Education</h3>
 
-                <div class="degree">
+                <p>
                     Government Higher Secondary School, Mamallapuram
-                </div>
+                </p>
 
                 <p>
-                    2018 – 2020
+                    <strong>2018 – 2020</strong>
                 </p>
 
             </div>
 
         </div>
-    </section>
+
+    </div>
+</section>
 
 
-    <!-- PROJECTS -->
+<!-- PROJECTS -->
 
-    <section id="projects">
-        <div class="container">
+<section id="projects">
+    <div class="container">
 
-            <div class="section-title">
-                <h2>Projects</h2>
-                <p>Academic & technical projects</p>
-            </div>
-
-            <div class="projects-grid">
-
-                <div class="project-card">
-
-                    <div class="project-number">01</div>
-
-                    <h3>Hiding Text Using Image Steganography</h3>
-
-                    <p>
-                        A Python-based mini project that hides text information
-                        inside an image in a way that is imperceptible to the
-                        human eye while preserving visual quality.
-                    </p>
-
-                    <br>
-
-                    <p>
-                        <strong>Technologies:</strong>
-                        Python, Pillow, OpenCV, Stegano
-                    </p>
-
-                </div>
-
-
-                <div class="project-card">
-
-                    <div class="project-number">02</div>
-
-                    <h3>Wi-Fi Controlled Car</h3>
-
-                    <p>
-                        An IoT project that enables remote operation of a car
-                        through a wireless network using a microcontroller,
-                        Wi-Fi modules, motor drivers and sensors.
-                    </p>
-
-                    <br>
-
-                    <p>
-                        <strong>Area:</strong>
-                        IoT
-                    </p>
-
-                </div>
-
-            </div>
-
+        <div class="section-title">
+            <h2>Projects</h2>
+            <p>Academic projects</p>
         </div>
-    </section>
 
+        <div class="project-grid">
 
-    <!-- CERTIFICATIONS -->
+            <div class="project-card">
 
-    <section id="certifications">
-        <div class="container">
+                <h3>Hiding Text Using Image Steganography</h3>
 
-            <div class="section-title">
-                <h2>Certifications</h2>
-                <p>Courses & professional certifications</p>
-            </div>
-
-            <div class="cert-list">
-
-                <div class="cert">
-                    <span>Coursera</span> — Certification in Data Analytics
+                <div class="tech">
+                    Python • Pillow • OpenCV • Stegano
                 </div>
-
-                <div class="cert">
-                    <span>CISCO</span> — Certification in Network Academy
-                </div>
-
-                <div class="cert">
-                    <span>Internship</span> — Certification in AI and IoT
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-        <div class="container">
-
-            <div class="contact-box">
-
-                <h2>Let's Connect</h2>
 
                 <p>
-                    Interested in connecting with me?
-                    Feel free to reach out.
+                    Mini project focused on hiding text inside images
+                    using image steganography techniques.
                 </p>
 
-                <div class="buttons" style="justify-content:center;">
+            </div>
 
-                    <a
-                        href="mailto:gokulsankar2707@gmail.com"
-                        class="btn primary">
-                        Email Me
-                    </a>
 
-                    <a
-                        href="https://www.linkedin.com/in/gokul-s-7abb50414"
-                        target="_blank"
-                        class="btn secondary">
-                        LinkedIn
-                    </a>
+            <div class="project-card">
 
+                <h3>Wi-Fi Controlled Car</h3>
+
+                <div class="tech">
+                    IoT
                 </div>
 
-                <div class="contact-info">
-
-                    <a href="mailto:gokulsankar2707@gmail.com">
-                        📧 gokulsankar2707@gmail.com
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/in/gokul-s-7abb50414"
-                        target="_blank">
-                        🔗 LinkedIn Profile
-                    </a>
-
-                </div>
+                <p>
+                    IoT-based project developed as part of Innovator's Day,
+                    focused on controlling a car through Wi-Fi.
+                </p>
 
             </div>
 
         </div>
-    </section>
+
+    </div>
+</section>
 
 
-    <!-- FOOTER -->
+<!-- CERTIFICATIONS -->
 
-    <footer>
-        © 2026 Gokul S. All Rights Reserved.
-    </footer>
+<section>
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Certifications</h2>
+            <p>Courses & certifications</p>
+        </div>
+
+        <div class="cert-grid">
+
+            <div class="card">
+                <h3>CISCO Network Academy</h3>
+                <p>
+                    Certification in Network Academy.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>AI & IoT Internship</h3>
+                <p>
+                    Internship certification in Artificial Intelligence
+                    and Internet of Things.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Coursera Data Analytics</h3>
+                <p>
+                    Certification in Data Analytics.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Interested in opportunities, collaborations or
+                professional connections? Feel free to reach out.
+            </p>
+
+            <div class="contact-links">
+
+                <a
+                    href="mailto:gokulsankar2707@gmail.com"
+                    class="btn primary">
+                    Email Me
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/gokul-s-7abb50414"
+                    target="_blank"
+                    class="btn secondary">
+                    LinkedIn
+                </a>
+
+                <a
+                    href="RESUME%20(2).pdf"
+                    class="btn secondary"
+                    download>
+                    Download Resume
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+    © 2026 Gokul S. All Rights Reserved.
+</footer>
 
 </body>
 </html>
