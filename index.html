@@ -770,6 +770,74 @@ footer{
   .certifications-grid {
     grid-template-columns: 1fr;
   }
+}
+.contact-card {
+  margin-top: 40px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-intro h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.contact-intro p {
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.7;
+  max-width: 500px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(6px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-item span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.5;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-item strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+    padding: 25px 20px;
+    gap: 25px;
+  }
+
+  .contact-intro h3 {
+    font-size: 24px;
+  }
 }    
 </style>
 </head>
@@ -1162,46 +1230,43 @@ footer{
 <!-- CONTACT -->
 
 <section id="contact">
-    <div class="container">
+  <div class="container">
 
-        <div class="contact-box">
+    <div class="section-title">
+      <span>GET IN TOUCH</span>
+      <h2>Let's Connect</h2>
+    </div>
 
-            <h2>Let's Connect</h2>
+    <div class="contact-card">
 
-            <p>
-                Interested in opportunities, collaborations or
-                professional connections? Feel free to reach out.
-            </p>
+      <div class="contact-intro">
+        <h3>Have an opportunity in mind?</h3>
+        <p>
+          I'm open to opportunities where I can contribute my experience
+          in customer support, team coordination and operations.
+        </p>
+      </div>
 
-            <div class="contact-links">
+      <div class="contact-links">
 
-                <a
-                    href="mailto:gokulsankar2707@gmail.com"
-                    class="btn primary">
-                    Email Me
-                </a>
+        <a href="mailto:gokulsankar2707@gmail.com" class="contact-item">
+          <span>Email</span>
+          <strong>gokulsankar2707@gmail.com</strong>
+        </a>
 
-                <a
-                    href="https://www.linkedin.com/in/gokul-s-7abb50414"
-                    target="_blank"
-                    class="btn secondary">
-                    LinkedIn
-                </a>
+        <a href="https://www.linkedin.com/in/gokul-s-7abb50414"
+           target="_blank"
+           class="contact-item">
+          <span>LinkedIn</span>
+          <strong>Connect with me →</strong>
+        </a>
 
-                <a
-                    href="RESUME%20(2).pdf"
-                    class="btn secondary"
-                    download>
-                    Download Resume
-                </a>
-
-            </div>
-
-        </div>
+      </div>
 
     </div>
-</section>
 
+  </div>
+</section>
 
 <footer>
     © 2026 Gokul S. All Rights Reserved.
