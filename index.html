@@ -577,6 +577,71 @@ footer{
   .experience-date {
     white-space: normal;
   }
+}
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.education-card {
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.education-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.education-year {
+  font-size: 13px;
+  opacity: 0.55;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.education-card h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.education-card h4 {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.7;
+  margin-bottom: 18px;
+}
+
+.education-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.education-badge {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0.8;
+}
+
+@media (max-width: 700px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    padding: 25px 20px;
+  }
 }    
 </style>
 </head>
@@ -821,52 +886,40 @@ footer{
 <!-- EDUCATION -->
 
 <section id="education">
-    <div class="container">
+  <div class="container">
 
-        <div class="section-title">
-            <h2>Education</h2>
-            <p>Academic background</p>
-        </div>
+    <div class="section-title">
+      <span>ACADEMIC BACKGROUND</span>
+      <h2>Education</h2>
+    </div>
 
-        <div class="education-grid">
+    <div class="education-grid">
 
-            <div class="card">
+      <div class="education-card">
+        <div class="education-year">2020 – 2024</div>
+        <h3>B.Tech – Information Technology</h3>
+        <h4>Anand Institute of Higher Technology</h4>
+        <p>
+          Completed B.Tech in Information Technology with an academic
+          score of <strong>82%</strong>.
+        </p>
+        <span class="education-badge">82% Academic Score</span>
+      </div>
 
-                <h3>B.Tech – Information Technology</h3>
-
-                <p>
-                    Anand Institute of Higher Technology, Chennai
-                </p>
-
-                <p>
-                    <strong>2020 – 2024</strong>
-                </p>
-
-                <p>
-                    Percentage: <strong>82%</strong>
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Higher Secondary Education</h3>
-
-                <p>
-                    Government Higher Secondary School, Mamallapuram
-                </p>
-
-                <p>
-                    <strong>2018 – 2020</strong>
-                </p>
-
-            </div>
-
-        </div>
+      <div class="education-card">
+        <div class="education-year">2018 – 2020</div>
+        <h3>Higher Secondary Certificate</h3>
+        <h4>Government Higher Secondary School, Mamallapuram</h4>
+        <p>
+          Completed higher secondary education with a strong foundation
+          for pursuing technology and engineering.
+        </p>
+      </div>
 
     </div>
-</section>
 
+  </div>
+</section>
 
 <!-- PROJECTS -->
 
